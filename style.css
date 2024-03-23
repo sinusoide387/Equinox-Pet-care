@@ -1,6 +1,8 @@
 .page {
-  background-color: rgb(79, 125, 154);
+  /* background: linear-gradient(to right, rgb(49, 85, 107) 50%, #5bb45b);
+  height: 100vh; */
   padding: 0;
+  margin: 0;
 }
 
 .nav__barr-container {
@@ -13,7 +15,7 @@
   border-bottom: #e7e7e5 1px solid;
   display: flex;
   flex-direction: row;
-
+  z-index: 1;
   align-items: center;
   padding: 10px;
 }
@@ -39,4 +41,25 @@
   background-color: #000;
   border-radius: 10%;
   width: 70px;
+}
+
+.hero__section {
+}
+.hero__section_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.dog__image-1 {
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
