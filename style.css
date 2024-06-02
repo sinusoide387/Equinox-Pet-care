@@ -129,3 +129,34 @@
   height: 100%;
   border: #000 4px solid;
 }
+
+.services {
+  position: fixed;
+  top: 50%; /* Center the modal vertically */
+  left: 50%; /* Center the modal horizontally */
+  transform: translate(-50%, -50%);
+  background-color: #fff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  padding: 20px;
+  max-width: 80%; /* Maximum width of the modal */
+  max-height: 80%; /* Maximum height of the modal */
+  overflow-y: auto;
+  z-index: 999999999999;
+  display: none;
+}
+
+.services__opened {
+  display: block;
+}
+
+.services__title {
+  margin-top: 0px;
+}
+
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 15px;
+}
