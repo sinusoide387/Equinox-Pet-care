@@ -179,6 +179,11 @@
   top: 10px;
 }
 
-/* .info__section {
-  
-} */
+.info__section {
+  background-color: blue;
+  background-size: 100vh;
+}
+
+.about__us {
+  margin-top: 0;
+}

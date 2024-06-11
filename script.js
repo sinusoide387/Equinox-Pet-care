@@ -10,6 +10,12 @@ closeButtonModal.addEventListener("click", () => {
   dogServices.classList.remove("services__opened");
 });
 
+document.onkeydown = function (event) {
+  if (event.key == "Escape") {
+    dogServices.classList.remove("services__opened");
+  }
+};
+
 ///////////////////////////////////////////////////////////////
 
 const aboutUsText = {
