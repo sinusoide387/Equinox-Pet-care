@@ -27,3 +27,20 @@ console.log(aboutUsSection);
 const textArea = aboutUsSection.querySelector(".about__us_text-area");
 console.log(textArea);
 textArea.textContent = aboutUsText.description;
+
+////// about us button functionality /////
+
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: `smooth` });
+  }
+}
+
+const aboutUsButton = document.querySelector("#nav__about-us");
+
+aboutUsButton.addEventListener("click", function () {
+  // esta es una funcionalidad que me permite hacer scroll hasta el div
+  console.log("button clicked");
+  scrollToSection("info__section_about-us");
+});
