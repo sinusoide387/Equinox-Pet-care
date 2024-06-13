@@ -42,5 +42,5 @@ const aboutUsButton = document.querySelector("#nav__about-us");
 aboutUsButton.addEventListener("click", function () {
   // esta es una funcionalidad que me permite hacer scroll hasta el div
   console.log("button clicked");
-  scrollToSection("info__section_about-us");
+  scrollToSection("about__Us_section");
 });

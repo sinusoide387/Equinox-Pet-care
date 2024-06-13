@@ -92,7 +92,7 @@
 }
 
 .gallery {
-  background: linear-gradient(to right, rgb(49, 85, 107) 50%, #5bb45b);
+  background: linear-gradient(to right, rgb(205, 210, 215) 50%, #0d0e0d);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -181,7 +181,7 @@
 
 .about__Us_section {
   padding: 40px;
-  background-color: rgb(87, 87, 199);
+  background-color: rgba(0, 102, 153, 0.9);
   background-size: 100vh;
 }
 
