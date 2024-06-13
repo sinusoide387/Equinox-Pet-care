@@ -22,7 +22,7 @@ const aboutUsText = {
   description: "We are a company fully dedicated to pets since 1992.",
 };
 
-const aboutUsSection = document.querySelector("#info__section_about-us");
+const aboutUsSection = document.querySelector("#about__Us_section");
 console.log(aboutUsSection);
 const textArea = aboutUsSection.querySelector(".about__us_text-area");
 console.log(textArea);
