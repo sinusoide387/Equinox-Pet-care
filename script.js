@@ -1,3 +1,4 @@
+
 const servicesButton = document.querySelector("#servicesButton");
 const dogServices = document.querySelector("#dog__services");
 const closeButtonModal = dogServices.querySelector("#close__button");
@@ -15,6 +16,13 @@ document.onkeydown = function (event) {
     dogServices.classList.remove("services__opened");
   }
 };
+
+document.addEventListener("click", (event) => {
+  if (!dogServices.contains(event.target) && event.target !== servicesButton) {
+    // si es el opuesto al dogService que continene el target y el event target es opuesto al serviceButton, entonces remueve la clase
+    dogServices.classList.remove("services__opened");
+  }
+});
 
 ///////////////////////////////////////////////////////////////
 

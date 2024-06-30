@@ -1,0 +1,35 @@
+.about__Us_section {
+  padding: 85px;
+  background-color: rgba(0, 102, 153, 0.9);
+  background-size: 100vh;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.about__us-title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.about__us_video-container {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  padding: 0px;
+}
+.about__us-video-1 {
+  margin-left: auto;
+  border: 8px solid black;
+}
+
+.about__us-video-2 {
+  margin-right: auto;
+  border: 8px solid black;
+}

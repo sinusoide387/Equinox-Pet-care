@@ -1,0 +1,61 @@
+.dog__image-1 {
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery {
+  background: linear-gradient(to right, rgb(205, 210, 215) 50%, #0d0e0d);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 0;
+  padding: 50px 200px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.gallery__dog-title {
+  text-align: center;
+}
+.gallery__items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  /* box-shadow: #0f0e0e; //Trabajar en el box-shadow */
+  grid-template-areas:
+    "cuatro tres tres"
+    "cuatro seis ocho "
+    "cinco cinco ocho";
+}
+
+.picture_3 {
+  grid-area: tres;
+}
+.picture_4 {
+  grid-area: cuatro;
+}
+.picture_5 {
+  grid-area: cinco;
+}
+.picture_6 {
+  grid-area: seis;
+}
+
+.picture_8 {
+  grid-area: ocho;
+}
+.gallery__item_picture {
+  size: cover;
+  max-width: 100%;
+  height: 100%;
+  border: #000 4px solid;
+}

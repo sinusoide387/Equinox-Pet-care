@@ -1,0 +1,5 @@
+.section {
+    width: 100vw; /* This makes each section take up the full width of its container */
+    box-sizing: border-box; /* Ensures that padding and border are included in the element's total width */
+  }
+  
