@@ -5,6 +5,7 @@
 @import url("./blocks/gallery.css");
 @import url("./blocks/services.css");
 @import url("./blocks/about__section.css");
+@import url("./blocks/modal.css");
 @keyframes modalFadeIn {
   from {
     opacity: 0;

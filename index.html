@@ -76,7 +76,7 @@
         </ul>
       </section>
 
-      <div id="dog__services" class="services">
+      <div id="dog__services" class="modal">
         <button
           type="button"
           class="modal__close"
@@ -125,6 +125,29 @@
             ></iframe>
           </div>
         </div>
+      </div>
+      <div id="gallery__modal" class="gallery__modal modal">
+        <form class="gallery__modal-form">
+          <button
+            type="button"
+            class="modal__close"
+            id="close__button"
+            data-dismiss="modal"
+            aria-hidden="true"
+          >
+            ×
+          </button>
+          <div class="gallery__modal-container">
+            <img class="gallery__image-example" src="images\picture_2.jpg" />
+            <input
+              class="gallery__modal-input"
+              type="url"
+              placeholder="         Pet picture here!"
+              required
+            />
+            <button class="gallery__submit-button" type="submit">Submit</button>
+          </div>
+        </form>
       </div>
     </main>
 

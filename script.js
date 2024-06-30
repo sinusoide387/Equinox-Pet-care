@@ -1,26 +1,25 @@
-
 const servicesButton = document.querySelector("#servicesButton");
 const dogServices = document.querySelector("#dog__services");
 const closeButtonModal = dogServices.querySelector("#close__button");
 
 servicesButton.addEventListener("click", () => {
-  dogServices.classList.add("services__opened");
+  dogServices.classList.add("modal__opened");
 });
 
 closeButtonModal.addEventListener("click", () => {
-  dogServices.classList.remove("services__opened");
+  dogServices.classList.remove("modal__opened");
 });
 
 document.onkeydown = function (event) {
   if (event.key == "Escape") {
-    dogServices.classList.remove("services__opened");
+    dogServices.classList.remove("modal__opened");
   }
 };
 
 document.addEventListener("click", (event) => {
   if (!dogServices.contains(event.target) && event.target !== servicesButton) {
     // si es el opuesto al dogService que continene el target y el event target es opuesto al serviceButton, entonces remueve la clase
-    dogServices.classList.remove("services__opened");
+    dogServices.classList.remove("modal__opened");
   }
 });
 
@@ -49,6 +48,11 @@ const aboutUsButton = document.querySelector("#nav__about-us");
 
 aboutUsButton.addEventListener("click", function () {
   // esta es una funcionalidad que me permite hacer scroll hasta el div
-  console.log("button clicked");
+
   scrollToSection("about__Us_section");
 });
+
+////// gallery input modal //////
+
+const galleryPopup = document.querySelector("#gallery__modal");
+galleryPopup.classList.add("modal__opened");
