@@ -1,13 +1,18 @@
 const servicesButton = document.querySelector("#servicesButton");
 const dogServices = document.querySelector("#dog__services");
-const closeButtonModal = dogServices.querySelector("#close__button");
+const closeButtonModalServices = dogServices.querySelector("#close__button");
+
+function close(element) {
+  dogServices.classList.remove("modal__opened");
+  galleryPopup.classList.remove("modal__opened");
+}
 
 servicesButton.addEventListener("click", () => {
   dogServices.classList.add("modal__opened");
 });
 
-closeButtonModal.addEventListener("click", () => {
-  dogServices.classList.remove("modal__opened");
+closeButtonModalServices.addEventListener("click", () => {
+  close();
 });
 
 document.onkeydown = function (event) {
@@ -56,3 +61,9 @@ aboutUsButton.addEventListener("click", function () {
 
 const galleryPopup = document.querySelector("#gallery__modal");
 galleryPopup.classList.add("modal__opened");
+
+const closeButtonModalGallery = galleryPopup.querySelector("#close__button");
+console.log(closeButtonModalGallery);
+closeButtonModalGallery.addEventListener("click", () => {
+  close();
+});
