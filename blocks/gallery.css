@@ -38,10 +38,17 @@
     "cuatro seis ocho "
     "cinco cinco ocho";
 }
+.gallery__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
 .gallery__item_container {
   position: relative;
-  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .gallery__item_button {
