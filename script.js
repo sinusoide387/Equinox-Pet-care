@@ -1,6 +1,16 @@
 const servicesButton = document.querySelector("#servicesButton");
-const dogServices = document.querySelector("#dog__services");
+const dogServices = document.querySelector("#dog__services"); //popUp para dog services
+const galleryPopup = document.querySelector("#gallery__modal"); //popUp de la galleria
 // const closeButtonModalServices = dogServices.querySelector("#close__button");
+
+/// usefull functions ///
+function open(element) {
+  element.classList.add("modal__opened");
+}
+
+function close(element) {
+  element.classList.remove("modal__opened");
+}
 
 const closeButtonModal = document.querySelectorAll(".modal__close");
 closeButtonModal.forEach((element) => {
@@ -10,14 +20,8 @@ closeButtonModal.forEach((element) => {
   });
 });
 
-/// usefull functions ///
-
-function close(element) {
-  element.classList.remove("modal__opened");
-}
-
 servicesButton.addEventListener("click", () => {
-  dogServices.classList.add("modal__opened");
+  open(dogServices);
 });
 
 // closeButtonModalServices.addEventListener("click", () => {
@@ -68,7 +72,6 @@ aboutUsButton.addEventListener("click", function () {
 
 ////// gallery input modal //////
 
-const galleryPopup = document.querySelector("#gallery__modal");
 galleryPopup.classList.add("modal__opened");
 
 // const closeButtonModalGallery = galleryPopup.querySelector("#close__button");

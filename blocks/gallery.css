@@ -39,6 +39,25 @@
     "cinco cinco ocho";
 }
 
+.gallery__item_container {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery__item_button {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.1);
+
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
 .picture_3 {
   grid-area: tres;
 }
