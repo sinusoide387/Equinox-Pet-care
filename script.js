@@ -1,8 +1,7 @@
 const servicesButton = document.querySelector("#servicesButton");
 const dogServices = document.querySelector("#dog__services"); //popUp para dog services
 const galleryPopup = document.querySelector("#gallery__modal"); //popUp de la galleria
-// const closeButtonModalServices = dogServices.querySelector("#close__button");
-
+const pictureEditButton = document.querySelectorAll(".gallery__item_button");
 /// usefull functions ///
 function open(element) {
   element.classList.add("modal__opened");
@@ -11,6 +10,14 @@ function open(element) {
 function close(element) {
   element.classList.remove("modal__opened");
 }
+
+//// funcionalidad para boton de edit de la imagen ///////
+pictureEditButton.forEach((element) => {
+  element.addEventListener("click", () => {
+    console.log("click!");
+    open(galleryPopup);
+  });
+});
 
 const closeButtonModal = document.querySelectorAll(".modal__close");
 closeButtonModal.forEach((element) => {
@@ -23,10 +30,6 @@ closeButtonModal.forEach((element) => {
 servicesButton.addEventListener("click", () => {
   open(dogServices);
 });
-
-// closeButtonModalServices.addEventListener("click", () => {
-//   close();
-// });
 
 document.onkeydown = function (event) {
   if (event.key == "Escape") {
@@ -69,13 +72,3 @@ aboutUsButton.addEventListener("click", function () {
 
   scrollToSection("about__Us_section");
 });
-
-////// gallery input modal //////
-
-galleryPopup.classList.add("modal__opened");
-
-// const closeButtonModalGallery = galleryPopup.querySelector("#close__button");
-// console.log(closeButtonModalGallery);
-// closeButtonModalGallery.addEventListener("click", () => {
-//   close();
-// });
