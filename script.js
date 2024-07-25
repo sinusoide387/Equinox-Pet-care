@@ -2,9 +2,29 @@ const servicesButton = document.querySelector("#servicesButton");
 const dogServices = document.querySelector("#dog__services"); //popUp para dog services
 const galleryPopup = document.querySelector("#gallery__modal"); //popUp de la galleria
 const pictureEditButton = document.querySelectorAll(".gallery__item_button");
+const galleryInput = document.querySelector("#gallery__modal_input");
+console.log(galleryInput);
+
+//primeros pasos en la funcionalidad de la galeria //
+
+function handleSubmit(inputUrl) {
+  inputUrl.value.prepend;
+}
+
+const pictureUrl = galleryInput.value;
+
+const gallerySubmitButton = document.querySelector("#gallery__submit-button");
+
+gallerySubmitButton.addEventListener("submit", (e) => {
+  e.preventDefault;
+  handleSubmit(pictureUrl);
+  close(galleryPopup);
+});
+
 /// usefull functions ///
 function open(element) {
   element.classList.add("modal__opened");
+  galleryInput.vlue = "";
 }
 
 function close(element) {
@@ -14,7 +34,6 @@ function close(element) {
 //// funcionalidad para boton de edit de la imagen ///////
 pictureEditButton.forEach((element) => {
   element.addEventListener("click", () => {
-    console.log("click!");
     open(galleryPopup);
   });
 });
@@ -51,9 +70,9 @@ const aboutUsText = {
 };
 
 const aboutUsSection = document.querySelector("#about__Us_section");
-console.log(aboutUsSection);
+
 const textArea = aboutUsSection.querySelector(".about__us_text-area");
-console.log(textArea);
+
 textArea.textContent = aboutUsText.description;
 
 ////// about us button functionality /////
