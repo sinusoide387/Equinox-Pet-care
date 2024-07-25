@@ -8,6 +8,10 @@ console.log(galleryInput);
 //primeros pasos en la funcionalidad de la galeria //
 
 function handleSubmit(inputUrl) {
+  const newImage = document.createElement("img");
+  newImage.className("gallery__item_picture");
+  newImage.src = inputUrl;
+
   inputUrl.value.prepend;
 }
 
@@ -15,8 +19,8 @@ const pictureUrl = galleryInput.value;
 
 const gallerySubmitButton = document.querySelector("#gallery__submit-button");
 
-gallerySubmitButton.addEventListener("submit", (e) => {
-  e.preventDefault;
+gallerySubmitButton.addEventListener("click", (e) => {
+  e.preventDefault();
   handleSubmit(pictureUrl);
   close(galleryPopup);
 });
@@ -24,7 +28,7 @@ gallerySubmitButton.addEventListener("submit", (e) => {
 /// usefull functions ///
 function open(element) {
   element.classList.add("modal__opened");
-  galleryInput.vlue = "";
+  galleryInput.value = "";
 }
 
 function close(element) {
