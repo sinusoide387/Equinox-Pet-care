@@ -8,20 +8,24 @@ console.log(galleryInput);
 //primeros pasos en la funcionalidad de la galeria //
 
 function handleSubmit(inputUrl) {
+  //reparar esta funcion para que aparezca en la pantalla
+  "use strict";
   const newImage = document.createElement("img");
-  newImage.className("gallery__item_picture");
-  newImage.src = inputUrl;
+  newImage.classList.add("gallery__item_picture");
+  newImage.src = inputUrl.value;
 
-  inputUrl.value.prepend;
+  const imagePlace = document.querySelector(".picture_5"); //ahora el problema es como hacer que cambie en el lugar especifico
+  imagePlace.src = imagePlace.prepend(newImage);
 }
 
 const pictureUrl = galleryInput.value;
 
+// button for submit//
 const gallerySubmitButton = document.querySelector("#gallery__submit-button");
 
 gallerySubmitButton.addEventListener("click", (e) => {
   e.preventDefault();
-  handleSubmit(pictureUrl);
+  handleSubmit(galleryInput);
   close(galleryPopup);
 });
 
