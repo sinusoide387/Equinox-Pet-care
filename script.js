@@ -13,9 +13,19 @@ function handleSubmit(inputUrl) {
   const newImage = document.createElement("img");
   newImage.classList.add("gallery__item_picture");
   newImage.src = inputUrl.value;
+  renderImages(newImage.src);
+}
 
-  const imagePlace = document.querySelector(".picture_5"); //ahora el problema es como hacer que cambie en el lugar especifico
-  imagePlace.src = imagePlace.prepend(newImage);
+function getRandom(max) {
+  //esta es la funcionalidad para que el valor sea aleatorio o random
+  return Math.floor(Math.random() * max);
+}
+
+function renderImages(newSrc) {
+  // funcion para render las imagenes
+  const images = document.querySelectorAll(".gallery__item_picture"); //selecciono todas las imagenes con un mismo selector
+  const randomIndex = getRandom(images.length); //aplico la funcion aleatoria con la propiedad length que toma el index de cada una
+  images[randomIndex].src = newSrc; // le cambio el atributo con el prop (newSRC)
 }
 
 const pictureUrl = galleryInput.value;
@@ -25,7 +35,7 @@ const gallerySubmitButton = document.querySelector("#gallery__submit-button");
 
 gallerySubmitButton.addEventListener("click", (e) => {
   e.preventDefault();
-  handleSubmit(galleryInput);
+  handleSubmit(galleryInput);// la funcion de submit tiene incorporada la de render 
   close(galleryPopup);
 });
 
